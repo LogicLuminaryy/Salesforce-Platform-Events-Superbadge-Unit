@@ -34,7 +34,7 @@ export default class DisconnectionNotice extends LightningElement {
             );
         });
 
-        subscribe(this.channelName, -1, this.messageCallback)
+        subscribe(this.channelName, -1, messageCallback)
             .then(response => {
                 this.subscription = response;
                 console.log('Subscribed to channel:', this.channelName);
